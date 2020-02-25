@@ -14,7 +14,7 @@ class HighLow
     {
       int guess = ((high + low) / 2);
       Console.WriteLine("Did you guess " + guess + "?");
-      Console.WriteLine("Was my guess too high, too low or spot on?");
+      Console.WriteLine("Was my guess too high, too low or spot on? ['high', 'low', 'correct']");
       string userHighLowCorrect = Console.ReadLine();
       if (userHighLowCorrect == "high")
       {
@@ -29,6 +29,16 @@ class HighLow
         Console.WriteLine("Damn I'm good!");
         notCorrect = false;
       }
+    }
+    Console.WriteLine("Would you like to play again? [y/n]");
+    string playAgain = Console.ReadLine();
+    if(playAgain == "y")
+    {
+      Main();
+    }
+    else
+    {
+      Console.WriteLine("Goodbye");
     }
   }
 }
